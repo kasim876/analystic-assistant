@@ -1,0 +1,68 @@
+@import "../mixins";
+@import "@shared/nav/nav";
+@import "@shared/header/header";
+@import "@shared/support-chat/support-chat";
+
+.hero {
+  width: 100%;
+
+  &__content {
+    grid-template-columns: repeat(2, 1fr);
+    padding: rem(60px) 0;
+    gap: rem(35px);
+  }
+
+  &__card {
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 4px;
+    padding: rem(40px);
+    box-shadow: 0 0 20px rgba(10 36 99 / 20%);
+    background-color: var(--white);
+
+    &_big {
+      grid-row: 2 span;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: em(20px, 40px);
+    font-weight: 700;
+    font-size: rem(40px);
+    line-height: 120%;
+    color: var(--primary);
+  }
+
+  &__link {
+    display: block;
+    text-decoration: underline;
+    color: var(--hit-gray);
+
+    &:not(:last-child) {
+      margin-bottom: em(12px, 16px);
+    }
+  }
+}
+
+.hero-article {
+  margin-bottom: auto;
+
+  &__header {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(12px);
+  }
+
+  &__name {
+    font-weight: 700;
+    color: var(--black);
+  }
+
+  &__date {
+    color: var(--pale-sky);
+  }
+
+  &__text {
+    color: var(--black);
+  }
+}

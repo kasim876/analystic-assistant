@@ -17,7 +17,7 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 0 var(--container-offset);
+  padding: var(--container-offset-v) var(--container-offset-h);
   max-width: calc(var(--content-width) + var(--container-offset-h) * 2);
 }
 
@@ -27,7 +27,13 @@ img {
   object-fit: cover;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
