@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('shared/head/head.html', {
+  "title": "Личный кабинет",
+  "stylePath": "styles/account.css",
+})
+<body>
+  <div class="container flex">
+    @@include('shared/nav/nav.html')
+    <div class="account">
+      @@include('shared/header/header.html', { "title": "Личный кабинет", "name": "Устюгов Иван Валерьевич" })
+      @@include('shared/support-chat/support-chat.html')
+      <main class="account__content grid">
+        <section class="account__section grid">
+          <h2 class="subtitle text-xl account__subtitle">Пакеты услуг</h2>
+          <div class="account__field">
+            <span class="account__caption text-md">Ваш пакет:</span>
+            <input type="text" class="input-reset account__input text-md" value="Название пакета" placeholder="Отсутствует информация" disabled>
+          </div>
+          <a href="#" class="account__link text-xs">Перейти к пакетам</a>
+        </section>
+  
+        <section class="account__section grid">
+          <h2 class="subtitle text-xl account__subtitle">Ваши данные</h2>
+          <div class="account__row grid">
+            <div class="account__field">
+              <span class="account__caption text-md">Ф.И.О.:</span>
+              <input type="text" class="input-reset account__input text-md" value="Устюгов Иван Валерьевич" placeholder="Отсутствует информация" disabled>
+            </div>
+            <div class="account__field">
+              <span class="account__caption text-md">Название компании:</span>
+              <input type="text" class="input-reset account__input text-md" value="" placeholder="Отсутствует информация" disabled>
+            </div>
+          </div>
+          <div class="account__row grid">
+            <div class="account__field">
+              <span class="account__caption text-md">Должность:</span>
+              <input type="text" class="input-reset account__input text-md" value="" placeholder="Отсутствует информация" disabled>
+            </div>
+            <div class="account__field">
+              <span class="account__caption text-md">E-mail</span>
+              <input type="email" class="input-reset account__input text-md" value="ustyugov.i@mail.com" placeholder="Отсутствует информация" disabled>
+            </div>
+          </div>
+          <div class="account__row grid">
+            <div class="account__field">
+              <span class="account__caption text-md">Юридический адрес</span>
+              <input type="text" class="input-reset account__input text-md" value="РК, 050000, г. Алматы, Турксибский р-н, пр. Суюнбая" placeholder="Отсутствует информация" disabled>
+            </div>
+            <div class="account__field">
+              <span class="account__caption text-md">РНН</span>
+              <input type="text" class="input-reset account__input text-md" value="600 400 615 711" placeholder="Отсутствует информация" disabled>
+            </div>
+          </div>
+          <div class="account__row grid">
+            <div class="account__field">
+              <span class="account__caption text-md">Адрес для корреспонденции</span>
+              <input type="text" class="input-reset account__input text-md" value="РК, 050051, г. Алматы, ул.Луганского 1, блок 5 (уг.ул.)" placeholder="Отсутствует информация" disabled>
+            </div>
+            <div class="account__field">
+              <span class="account__caption text-md">БИН</span>
+              <input type="text" class="input-reset account__input text-md" value="100 240 019 701" placeholder="Отсутствует информация" disabled>
+            </div>
+          </div>
+          <div class="account__row grid">
+            <div class="account__field">
+              <span class="account__caption text-md">Расчетный счет</span>
+              <input type="text" class="input-reset account__input text-md" value="KZ 45914398914BC34692KZT" placeholder="Отсутствует информация" disabled>
+            </div>
+            <div class="account__field">
+              <span class="account__caption text-md">Банк</span>
+              <input type="text" class="input-reset account__input text-md" value='Дочерний Банк АО "Сбербанк"' placeholder="Отсутствует информация" disabled>
+            </div>
+          </div>
+          <div class="account__row grid">
+            <div class="account__field">
+              <span class="account__caption text-md">БИК</span>
+              <input type="text" class="input-reset account__input text-md" value="SABRKZKA" placeholder="Отсутствует информация" disabled>
+            </div>
+            <div class="account__field">
+              <input type="text" class="input-reset account__input text-md" value="КБе" placeholder="Отсутствует информация" disabled>
+            </div>
+          </div>
+          @@include('shared/button/button.html', { "type": "submit", "text": "Редактировать", "class": "account__btn", "attributes": "" })
+        </section>
+  
+        <section class="account__section grid">
+          <h2 class="subtitle text-xl account__subtitle">Пользователи</h2>
+          <form class="account__row grid" action="#" method="post">
+            @@include('shared/input/input.html', { "name": "email", "type": "email", "class": "", "placeholder": "Введите e-mail", "value": "", "attributes": "" })
+            @@include('shared/button/button.html', { "type": "submit", "text": "Добавить пользователя", "class": "", "attributes": "" })
+          </form>
+          <table class="account-table grid">
+            <thead class="account-table__header">
+              <tr class="grid account-table__row">
+                <th><button class="btn-reset text-md account-table__button flex">Ф.И.О.</button></th>
+                <th><button class="btn-reset text-md account-table__button flex">E-mail</button></th>
+                <th><button class="btn-reset text-md account-table__button flex">Должность</button></th>
+              </tr>
+            </thead>
+            <tbody class="account-table__body grid">
+              <tr class="grid account-table__row">
+                <td class="text-md account-table__cell">Лукьянов Юрий Андреевич</td>
+                <td class="text-md account-table__cell">lukyaniv.yu@gmail.com</td>
+                <td class="text-md account-table__cell">Бухгалтер</td>
+                <td class="text-md account-table__cell"><button class="btn-reset account__link text-xs account__link_right">Удалить</button></td>
+              </tr>
+              <tr class="grid account-table__row">
+                <td class="text-md account-table__cell">Лукьянов Юрий Андреевич</td>
+                <td class="text-md account-table__cell">lukyaniv.yu@gmail.com</td>
+                <td class="text-md account-table__cell">Ст. специалист</td>
+                <td class="text-md account-table__cell"><button class="btn-reset account__link text-xs account__link_right">Удалить</button></td>
+              </tr>
+              <tr class="grid account-table__row">
+                <td class="text-md account-table__cell">Лукьянов Юрий Андреевич</td>
+                <td class="text-md account-table__cell">lukyaniv.yu@gmail.com</td>
+                <td class="text-md account-table__cell">Младший специалист</td>
+                <td class="text-md account-table__cell"><button class="btn-reset account__link text-xs account__link_right">Удалить</button></td>
+              </tr>
+              <tr class="grid account-table__row">
+                <td class="text-md account-table__cell">Лукьянов Юрий Андреевич</td>
+                <td class="text-md account-table__cell">lukyaniv.yu@gmail.com</td>
+                <td class="text-md account-table__cell">Директор по отрасли</td>
+                <td class="text-md account-table__cell"><button class="btn-reset account__link text-xs account__link_right">Удалить</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
