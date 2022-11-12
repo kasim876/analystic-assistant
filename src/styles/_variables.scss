@@ -1,0 +1,22 @@
+:root {
+  // colors
+
+  --primary: #0a2463;
+  --white: #fff;
+  --black: #1e1b18;
+  --hit-gray: #adb5bd;
+  --red: #d8315b;
+  --pale-sky: #6c757d;
+  --trout: #495057;
+  --ghost: #ced4da;
+
+  // values
+
+  --content-width: #{em(1110px)};
+  --container-offset-h: #{em(15px)};
+  --container-offset-v: #{em(40px)};
+
+  // fonts
+
+  --font-family: "Roboto", sans-serif;
+}
