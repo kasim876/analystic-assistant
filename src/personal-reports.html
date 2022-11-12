@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('shared/head/head.html', {
+  "title": "Индивидуальные отчёты",
+  "stylePath": "styles/personal-reports.css",
+})
+<body>
+  <div class="container flex">
+    @@include('shared/nav/nav.html')
+    <div class="personal-reports">
+      @@include('shared/header/header.html', { "title": "Индивидуальные отчёты", "name": "Устюгов Иван Валерьевич" })
+      @@include('shared/support-chat/support-chat.html')
+      <main class="personal-reports__content grid">
+        @@include('shared/reports-service/reports-service.html', { "text": "Материалы" })
+        @@include('shared/reports-service/reports-service-disabled.html', { "text": "Баланс", "tariffName": "Silver" })
+        @@include('shared/reports-service/reports-service-disabled.html', { "text": "Продажи", "tariffName": "Gold" })
+        @@include('shared/reports-service/reports-service-disabled.html', { "text": "Баланс", "tariffName": "Platinum" })
+      </main>
+    </div>
+  </div>
+</body>
+</html>

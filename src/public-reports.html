@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('shared/head/head.html', {
+  "title": "Общедоступные отчёты",
+  "stylePath": "styles/public-reports.css",
+})
+<body>
+  <div class="container flex">
+    @@include('shared/nav/nav.html')
+    <div class="public-reports">
+      @@include('shared/header/header.html', { "title": "Общедоступные отчёты", "name": "Устюгов Иван Валерьевич" })
+      @@include('shared/support-chat/support-chat.html')
+      <main class="public-reports__content grid">
+        @@include('shared/reports-service/reports-service.html', { "text": "Материалы" })
+        @@include('shared/reports-service/reports-service.html', { "text": "Баланс" })
+        @@include('shared/reports-service/reports-service-disabled.html', { "text": "Продажи", "tariffName": "Silver" })
+        @@include('shared/reports-service/reports-service-disabled.html', { "text": "Баланс", "tariffName": "Gold" })
+      </main>
+    </div>
+  </div>
+</body>
+</html>

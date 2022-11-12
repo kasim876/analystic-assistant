@@ -1,0 +1,17 @@
+@import "../mixins";
+@import "@shared/nav/nav";
+@import "@shared/header/header";
+@import "@shared/support-chat/support-chat";
+@import "@shared/reports-service/reports-service";
+
+.create-report {
+  width: 100%;
+
+  &__content {
+    padding: rem(30px) 0;
+  }
+
+  &__subtitle {
+    margin-bottom: em(40px, 24px);
+  }
+}

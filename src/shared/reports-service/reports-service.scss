@@ -1,0 +1,44 @@
+@import "../button/button";
+
+.reports-service {
+  align-items: center;
+
+  &__button {
+    max-width: rem(350px);
+
+    &_disabled {
+      margin-right: rem(30px);
+      border-color: var(--pale-sky);
+      background-color: var(--pale-sky);
+      pointer-events: none;
+    }
+  }
+
+  &__alert {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: rem(43px);
+    background-image: url("../images/svg/star.svg");
+    background-position: left center;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+  }
+
+  &__caption {
+    display: block;
+    margin-bottom: em(4px, 16px);
+    color: var(--black);
+  }
+
+  &__link {
+    display: block;
+    text-decoration: underline;
+    color: var(--pale-sky);
+    transition: color 0.3s ease-in-out;
+
+    @include hover {
+      color: var(--red);
+    }
+  }
+}
