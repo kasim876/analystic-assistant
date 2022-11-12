@@ -16,5 +16,9 @@
     margin-bottom: rem(12px);
     padding-right: rem(20px);
     padding-left: rem(60px);
+
+    &_single {
+      margin: 0;
+    }
   }
 }
