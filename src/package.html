@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('shared/head/head.html', {
+  "title": "Пакеты услуг",
+  "stylePath": "styles/package.css",
+})
+<body>
+  <div class="container flex">
+    @@include('shared/nav/nav.html')
+    <div class="package">
+      @@include('shared/header/header.html', { "title": "Пакеты услуг", "name": "Устюгов Иван Валерьевич" })
+      @@include('shared/support-chat/support-chat.html')
+      <main class="flex package__content">
+        <div class="package-item grid">
+          <div class="package-item__card">
+            <header class="package-item__header package-item__header_silver">
+              <h3 class="package-item__name text-xl">Silver</h3>
+              <span class="package-item__price text-md">1.000 тнг/разово</span>
+            </header>
+            <div class="package-item__content">
+              <ul class="list-reset package-item__list">
+                <li class="package-item__list-item text-md">что входит в пакет</li>
+                <li class="package-item__list-item text-md">что входит в пакет</li>
+                <li class="package-item__list-item text-md">что входит в пакет</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#" class="package-item__link">Приобрести пакет</a>
+        </div>
+        <div class="package-item grid">
+          <div class="package-item__card">
+            <header class="package-item__header package-item__header_gold">
+              <h3 class="package-item__name text-xl">Gold</h3>
+              <span class="package-item__price text-md">5.000 тнг/5 отчетов</span>
+            </header>
+            <div class="package-item__content">
+              <ul class="list-reset package-item__list">
+                <li class="package-item__list-item text-md">что входит в пакет</li>
+                <li class="package-item__list-item text-md">что входит в пакет</li>
+                <li class="package-item__list-item text-md">что входит в пакет</li>
+                <li class="package-item__list-item text-md">что входит в пакет</li>
+                <li class="package-item__list-item text-md">что входит в пакет</li>
+                <li class="package-item__list-item text-md">что входит в пакет</li>
+                <li class="package-item__list-item text-md">что входит в пакет</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#" class="package-item__link">Приобрести пакет</a>
+        </div>
+        <div class="package-item grid">
+          <div class="package-item__card">
+            <header class="package-item__header package-item__header_platinum">
+              <h3 class="package-item__name text-xl">Platinum</h3>
+              <span class="package-item__price text-md">25.000 тнг/10 отчетов</span>
+            </header>
+            <div class="package-item__content">
+              <ul class="list-reset package-item__list">
+                <li class="package-item__list-item text-md">что входит в пакет</li>
+                <li class="package-item__list-item text-md">что входит в пакет</li>
+                <li class="package-item__list-item text-md">что входит в пакет</li>
+                <li class="package-item__list-item text-md">что входит в пакет</li>
+                <li class="package-item__list-item text-md">что входит в пакет</li>
+                <li class="package-item__list-item text-md">что входит в пакет</li>
+                <li class="package-item__list-item text-md">что входит в пакет</li>
+                <li class="package-item__list-item text-md">что входит в пакет</li>
+                <li class="package-item__list-item text-md">что входит в пакет</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#" class="package-item__link text-md">Приобрести пакет</a>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
