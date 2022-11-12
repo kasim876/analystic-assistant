@@ -1,0 +1,28 @@
+.radio__input {
+  position: absolute;
+  opacity: 0;
+
+  &:checked + .radio__caption::before {
+    border-color: var(--red);
+    background-color: var(--red);
+  }
+}
+
+.radio__caption {
+  display: flex;
+  font-size: rem(16px);
+  line-height: 150%;
+  color: var(--black);
+  user-select: none;
+
+  &::before {
+    content: "";
+    display: block;
+    margin-right: rem(12px);
+    border: 1px solid var(--ghost);
+    border-radius: 50%;
+    width: rem(24px);
+    height: rem(24px);
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  }
+}

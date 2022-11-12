@@ -2,6 +2,7 @@
 @import "@shared/auth-logo/auth-logo";
 @import "@shared/auth-field/auth-field";
 @import "@shared/button/button";
+@import "@shared/radio/radio";
 
 .auth {
   flex-direction: column;
@@ -38,5 +39,21 @@
   &__footer {
     grid-template-columns: repeat(2, auto);
     gap: rem(30px);
+  }
+
+  &__radios {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: rem(20px);
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: rem(28px);
+    line-height: 120%;
+    color: var(--black);
+  }
+
+  &__note {
+    margin-bottom: em(20px, 16px);
   }
 }
