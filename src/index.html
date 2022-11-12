@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('shared/head/head.html', {
+@@include('shared/Head/head.html', {
   "title": "Вход",
-  "stylePath": "styles/index.css",
+  "stylePath": "styles/auth.css",
 })
 <body>
-  <div class="site-container">
+  <div class="auth flex">
+    @@include('shared/auth-logo/auth-logo.html')
+    <h1 class="auth__title">Войти</h1>
+    <form action="#" class="auth__form flex" method="post">
+      @@loop('shared/auth-field/auth-field.html', [{ "icon": "mail", "name": "email", "type": "email", "placeholder": "E-mail", "value": "", "attributes": "", "class": "" }, { "icon": "lock", "name": "password", "type": "password", "placeholder": "Password", "value": "", "attributes": "", "class": "" }])
 
+      <a href="forget-password.html" class="auth__link text-md">Забыли пароль?</a>
+
+      @@include('shared/button/button.html', { "type": "submit", "class": "auth__button", "text": "Войти", attributes: "disabled" })
+    </form>
+    <div class="auth__footer grid">
+      <span class="text-md">Вы не зарегестрированы?</span>
+      <a href="registration.html" class="auth__link auth__link_decoration text-md">Регистрация</a>
+    </div>
   </div>
 </body>
 </html>

@@ -1,0 +1,21 @@
+.button {
+  border: 1px solid var(--red);
+  border-radius: rem(4px);
+  width: 100%;
+  height: rem(60px);
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--red);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+  &:disabled {
+    border-color: var(--pale-sky);
+    background-color: var(--pale-sky);
+    pointer-events: none;
+  }
+
+  @include hover {
+    color: var(--red);
+    background-color: transparent;
+  }
+}
