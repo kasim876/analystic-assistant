@@ -66,4 +66,25 @@
     padding: rem(18px) 0;
     text-align: center;
   }
+
+  &__alert {
+    display: none;
+    margin: em(8px, 12.8px) 0;
+    color: #f00;
+  }
+}
+
+.wrong {
+  .auth-field__icon {
+    fill: #f00;
+  }
+
+  .input {
+    border-color: #f00;
+    color: #f00;
+  }
+
+  .auth__alert {
+    display: block;
+  }
 }

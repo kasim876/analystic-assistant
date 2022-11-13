@@ -8,9 +8,11 @@
   <div class="auth flex">
     @@include('shared/auth-logo/auth-logo.html')
     <h1 class="auth__title">Войти</h1>
-    <form action="#" class="auth__form flex" method="post">
+    <form action="#" class="auth__form flex wrong" method="post">
       @@loop('shared/auth-field/auth-field.html', [{ "icon": "mail", "name": "email", "type": "email", "placeholder": "E-mail", "value": "", "attributes": "", "class": "" }, { "icon": "lock", "name": "password", "type": "password", "placeholder": "Password", "value": "", "attributes": "", "class": "" }])
 
+      <span class="text-xs auth__alert">E-mail или пароль введен неверно. Повторите попытку</span>
+      
       <a href="forget-password.html" class="auth__link text-md">Забыли пароль?</a>
 
       @@include('shared/button/button.html', { "type": "submit", "class": "auth__button", "text": "Войти", attributes: "disabled" })

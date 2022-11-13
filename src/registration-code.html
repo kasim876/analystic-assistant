@@ -11,8 +11,10 @@
     <form action="#" class="auth__form flex" method="post">
       <p class="auth__note text-md">Вам отправили на e-mail код подтверждения. Просим вас ввести его ниже</p>
       
-      @@include('shared/input/input.html', { "name": "code", "type": "text", "placeholder": "Код подтверждения", "value": "", "attributes": "" })
+      @@include('shared/input/input.html', { "name": "code", "type": "text", "placeholder": "Код подтверждения", "class": "","value": "", "attributes": "" })
 
+      <span class="text-xs auth__alert">E-mail введен неверно. Повторите попытку</span>
+      
       @@include('shared/button/button.html', { "type": "submit", "class": "auth__button", "text": "Отправить код", "attributes": "disabled" })
     </form>
   </div>
