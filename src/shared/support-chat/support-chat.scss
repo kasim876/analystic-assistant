@@ -13,4 +13,8 @@
   &__icon {
     fill: var(--white);
   }
+
+  @include resolution(1200px) {
+    right: rem(80px);
+  }
 }

@@ -10,6 +10,10 @@
     grid-template-columns: repeat(2, 1fr);
     padding: rem(60px) 0;
     gap: rem(35px);
+
+    @include laptop {
+      grid-template-columns: initial;
+    }
   }
 
   &__card {
@@ -64,5 +68,9 @@
 
   &__text {
     color: var(--black);
+  }
+
+  @include laptop {
+    margin-bottom: rem(12px);
   }
 }

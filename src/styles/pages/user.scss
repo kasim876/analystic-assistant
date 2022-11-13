@@ -33,6 +33,10 @@
 
   &__wrapper {
     display: flex;
+
+    @include resolution(1200px) {
+      flex-direction: column;
+    }
   }
 
   &__sidebar {
@@ -72,6 +76,7 @@
   }
 
   &__info-box {
+    justify-content: center;
     margin-bottom: rem(30px);
   }
 

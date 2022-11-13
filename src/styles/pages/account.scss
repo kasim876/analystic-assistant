@@ -26,6 +26,10 @@
     align-items: end;
     grid-template-columns: 460px 1fr;
     gap: rem(25px);
+
+    @include resolution(1200px) {
+      grid-template-columns: initial;
+    }
   }
 
   &__field {

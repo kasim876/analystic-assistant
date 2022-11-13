@@ -126,3 +126,8 @@ a {
 .subtitle {
   color: var(--black);
 }
+
+.table__wrapper {
+  overflow: auto;
+  max-width: rem(1000px);
+}

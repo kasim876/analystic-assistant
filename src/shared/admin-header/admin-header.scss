@@ -1,13 +1,11 @@
 .admin-header {
-  flex-direction: column;
-  align-items: flex-end;
-
   &__menu {
     align-items: center;
   }
 
   &__notice {
     margin-right: rem(50px);
+    margin-left: auto;
     width: rem(18px);
     height: rem(18px);
     background-image: url("../images/svg/bell.svg");

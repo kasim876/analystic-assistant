@@ -9,6 +9,11 @@
   &__content {
     justify-content: space-between;
     padding: rem(40px) 0;
+
+    @include laptop {
+      flex-direction: column;
+      justify-content: initial;
+    }
   }
 }
 
@@ -17,7 +22,12 @@
   width: 100%;
 
   &:not(:last-child) {
-    margin-right: 30px;
+    margin-right: rem(30px);
+
+    @include laptop {
+      margin-right: 0;
+      margin-bottom: rem(50px);
+    }
   }
 
   &__card {
@@ -59,6 +69,12 @@
 
   &__content {
     padding: rem(32px) rem(28px);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__list-item {

@@ -45,6 +45,7 @@
   }
 
   &__icon {
+    flex-shrink: 0;
     margin-right: rem(10px);
     color: inherit;
     fill: currentcolor;
