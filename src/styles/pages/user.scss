@@ -1,0 +1,232 @@
+@import "../mixins";
+@import "@shared/admin-nav/admin-nav";
+@import "@shared/admin-header/admin-header";
+@import "@shared/table/table";
+
+.user {
+  width: 100%;
+
+  &__container {
+    padding: var(--container-offset-v) var(--container-offset-h);
+  }
+
+  &__body {
+    padding: rem(10px) 0;
+  }
+
+  &__back-btn {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: rem(30px);
+    color: var(--trout);
+
+    &::before {
+      content: "";
+      display: block;
+      margin-right: rem(15px);
+      width: rem(9px);
+      height: rem(14px);
+      background-image: url("../images/svg/arrow.svg");
+      background-size: cover;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__sidebar {
+    flex-direction: column;
+    align-items: center;
+    border-radius: rem(10px) 0 0 rem(10px);
+    padding: rem(50px);
+    background-color: #eeeff3;
+  }
+
+  &__content {
+    border: 1px solid #dadbe2;
+    border-left: none;
+    border-radius: 0 rem(10px) rem(10px) 0;
+    padding: rem(20px);
+    width: 100%;
+  }
+
+  &__avatar {
+    margin-bottom: rem(15px);
+    border-radius: 50%;
+    width: rem(100px);
+    height: rem(100px);
+    background-color: rgba(62 146 204 / 10%);
+  }
+
+  &__name {
+    margin-bottom: em(15px, 20px);
+    font-size: rem(20px);
+    line-height: 120%;
+    text-align: center;
+    color: var(--black);
+  }
+
+  &__email {
+    margin-bottom: em(30px, 12.8px);
+  }
+
+  &__info-box {
+    margin-bottom: rem(30px);
+  }
+
+  &__info-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: rem(15px);
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: block;
+      width: rem(1px);
+      height: 100%;
+      background-color: rgba(151 155 164 / 25%);
+    }
+  }
+
+  &__info-caption {
+    margin-bottom: em(5px, 12.8px);
+  }
+
+  &__header {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: rem(24px);
+    gap: rem(20px);
+  }
+
+  &__balance {
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(10px);
+  }
+
+  &__package {
+    align-items: center;
+    padding: rem(10px);
+  }
+
+  &__package-img {
+    margin-right: rem(20px);
+    border-radius: rem(4px);
+    width: rem(50px);
+    height: rem(50px);
+    background-color: var(--primary);
+  }
+
+  &__package-row {
+    align-items: center;
+  }
+
+  &__package-name {
+    margin-right: em(8px, 16px);
+    font-weight: 700;
+    color: var(--black);
+  }
+
+  &__package-status {
+    border-radius: rem(4px);
+    padding: rem(4px) rem(8px);
+    font-weight: 500;
+    font-size: rem(10px);
+    color: var(--primary);
+    background-color: rgba(10 36 99 / 10%);
+  }
+
+  &__package-info {
+    display: inline-flex !important;
+    align-items: center;
+  }
+
+  &__package-info:not(:last-child)::after {
+    content: "";
+    display: block;
+    margin: 0 rem(10px);
+    width: rem(1px);
+    height: rem(12px);
+    background-color: currentcolor;
+  }
+
+  &-caption {
+    display: inline-block;
+    font-weight: 500;
+    color: #979ba4;
+  }
+
+  &-box {
+    display: flex;
+    border: 1px solid rgba(151 155 164 / 25%);
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  &-digital {
+    font-weight: 700;
+    color: var(--black);
+  }
+
+  &-btn {
+    font-weight: 500;
+    color: var(--red);
+
+    &_important {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: rem(4px);
+      background-color: rgba(216 49 91 / 10%);
+
+      &::before {
+        content: "";
+        display: block;
+        margin-right: rem(10px);
+        width: rem(16px);
+        height: rem(16px);
+        background-image: url("../images/svg/alert.svg");
+        background-size: cover;
+      }
+    }
+  }
+}
+
+.user-list {
+  display: grid;
+  width: 100%;
+  gap: rem(10px);
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__value {
+    color: var(--black);
+  }
+}
+
+.user-section {
+  &:not(:last-child) {
+    margin-bottom: rem(24px);
+  }
+
+  &__header {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(16px);
+  }
+
+  &__btns {
+    grid-template-columns: repeat(2, auto);
+    gap: rem(20px);
+  }
+}
