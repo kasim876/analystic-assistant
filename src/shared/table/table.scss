@@ -42,14 +42,20 @@
     font-weight: 700;
     font-size: rem(9px);
     white-space: nowrap;
-    color: var(--white);
 
     &_green {
+      color: var(--white);
       background-color: #038f11;
     }
 
     &_red {
+      color: var(--white);
       background-color: #be2d2e;
+    }
+
+    &_blue {
+      color: #3e92cc;
+      background-color: rgba(62 146 204 / 10%);
     }
   }
 
