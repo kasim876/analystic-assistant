@@ -1,0 +1,21 @@
+.notifications {
+  &__title {
+    margin-bottom: em(8px, 16px);
+    font-weight: 700;
+    font-size: rem(16px);
+    line-height: 150%;
+    color: var(--black);
+  }
+
+  &__list {
+    display: grid;
+    gap: rem(12px);
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    color: var(--pale-sky);
+    gap: rem(20px);
+  }
+}
