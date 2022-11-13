@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('shared/head/head.html', {
+  "title": "Публикация новости",
+  "stylePath": "styles/edit-news.css",
+})
+<body>
+  <div class="edit-news__container flex">
+    @@include('shared/admin-nav/admin-nav.html')
+    <div class="edit-news">
+      @@include('shared/admin-header/admin-header.html', { "name": "Диляра Сакатаева", "role": "admin" })
+      <main class="edit-news__content">
+        <h1 class="edit-news__title">Опубликовать новость</h1>
+        <form action="#" class="edit-news__form grid" method="post">
+          <div class="edit-news__field">
+            <span class="edit-news__caption text-md">Заголовок</span>
+            @@include('shared/input/input.html', { name: "title", type: "text", value: "", placeholder: "", attributes: "", class: "edit-news__input" })
+          </div>
+          <div class="edit-news__field">
+            <span class="edit-news__caption text-md">Дата публикации</span>
+            @@include('shared/input/input.html', { name: "title", type: "date", value: "", placeholder: "", attributes: "", class: "edit-news__input edit-news__input_small" })
+          </div>
+          <div class="edit-news__field">
+            <span class="edit-news__caption text-md">Текст</span>
+            <textarea name="text" class="input edit-news__textarea"></textarea>
+          </div>
+          <div class="edit-news__bottom flex">
+            @@include('shared/button/button.html', { type: "submit", class: "edit-news__btn", text: "Создать" })
+            @@include('shared/button/button.html', { type: "submit", class: "edit-news__btn", text: "Архивировать" })
+          </div>
+        </form>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
