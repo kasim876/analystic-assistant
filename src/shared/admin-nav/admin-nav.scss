@@ -1,0 +1,52 @@
+@import "@shared/logo/logo";
+
+.admin-nav {
+  position: sticky;
+  top: rem(40px);
+  margin-right: rem(30px);
+  border-radius: 4px;
+  padding: rem(40px) rem(25px);
+  height: 100%;
+  max-width: rem(255px);
+  background-color: var(--primary);
+
+  &__logo {
+    margin: 0 auto;
+    margin-bottom: rem(60px);
+    width: rem(150px);
+    height: rem(50px);
+    background-image: url("../images/logo-white.png");
+    background-size: cover;
+  }
+
+  &__list {
+    margin-bottom: rem(170px);
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: rem(30px);
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    color: var(--hit-gray);
+    transition: color 0.3s ease-in-out;
+
+    &_current {
+      color: var(--white);
+      pointer-events: none;
+    }
+
+    @include hover {
+      color: var(--white);
+    }
+  }
+
+  &__icon {
+    margin-right: rem(10px);
+    color: inherit;
+    fill: currentcolor;
+  }
+}
