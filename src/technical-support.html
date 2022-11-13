@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('shared/head/head.html', {
+  "title": "Техническая поддержка",
+  "stylePath": "styles/technical-support.css",
+})
+<body>
+  <div class="container flex">
+    @@include('shared/nav/nav.html')
+    <div class="technical-support">
+      @@include('shared/header/header.html', { "title": "Техническая поддержка", "name": "Устюгов Иван Валерьевич" })
+      <main class="technical-support__content">
+        <p class="text-xl technical-support__caption">Выберите отдел</p>
+        <form action="#" class="technical-support__form grid" method="post">
+          @@loop('shared/radio/radio.html', [{"name": "departament", "caption": "Отдел продаж"}, {"name": "departament", "caption": "Бухгалтерия"}, {"name": "departament", "caption": "Тех.поддержка"}])
+          <button type="submit" class="btn-reset text-md technical-support__btn">Выбрать</button>
+        </form>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

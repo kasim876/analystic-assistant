@@ -1,0 +1,83 @@
+@import "../mixins";
+@import "@shared/nav/nav";
+@import "@shared/header/header";
+@import "@shared/radio/radio";
+@import "@shared/input/input";
+
+.technical-support {
+  width: 100%;
+
+  &__content {
+    padding-top: rem(85px);
+    gap: rem(30px);
+  }
+
+  &__caption {
+    margin-bottom: em(50px, 24px);
+    color: var(--black);
+  }
+
+  &__form {
+    gap: rem(35px);
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  &__field-caption {
+    display: block;
+    margin-bottom: em(4px, 16px);
+  }
+
+  &__input {
+    height: rem(40px);
+    max-width: rem(330px);
+
+    &_big {
+      padding-top: rem(20px);
+      width: 100%;
+      height: rem(290px);
+      resize: none;
+    }
+  }
+
+  &__btn {
+    margin-left: rem(35px);
+    border: 1px solid var(--red);
+    border-radius: rem(4px);
+    width: 100%;
+    height: rem(31px);
+    max-width: rem(140px);
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--red);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    @include hover {
+      color: var(--red);
+      background-color: var(--white);
+    }
+  }
+
+  &__row {
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__alert {
+    font-size: rem(40px);
+    line-height: 120%;
+    text-align: center;
+    color: var(--primary);
+
+    span {
+      display: block;
+      font-size: rem(20px);
+      color: var(--black);
+    }
+  }
+}
