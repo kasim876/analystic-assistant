@@ -1,0 +1,90 @@
+@import "../mixins";
+@import "@shared/auth-logo/auth-logo";
+@import "@shared/auth-field/auth-field";
+@import "@shared/button/button";
+@import "@shared/radio/radio";
+
+.auth {
+  flex-direction: column;
+  align-items: center;
+  padding: rem(140px) 0;
+
+  &__title {
+    margin-bottom: em(40px, 40px);
+    font-size: rem(40px);
+    line-height: 120%;
+    color: var(--black);
+  }
+
+  &__form {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: rem(20px);
+    width: 100%;
+    max-width: rem(540px);
+  }
+
+  &__link {
+    color: var(--hit-gray);
+    transition: color 0.3s ease-in-out;
+
+    &_decoration {
+      text-decoration: underline;
+    }
+
+    @include hover {
+      color: var(--red);
+    }
+  }
+
+  &__button {
+    margin-top: rem(20px);
+  }
+
+  &__footer {
+    grid-template-columns: repeat(2, auto);
+    gap: rem(30px);
+  }
+
+  &__radios {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: rem(20px);
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: rem(28px);
+    line-height: 120%;
+    color: var(--black);
+  }
+
+  &__note {
+    margin-bottom: em(20px, 16px);
+  }
+
+  &__button-link {
+    padding: rem(18px) 0;
+    text-align: center;
+  }
+
+  &__alert {
+    display: none;
+    margin: em(8px, 12.8px) 0;
+    color: #f00;
+  }
+}
+
+.wrong {
+  .auth-field__icon {
+    fill: #f00;
+  }
+
+  .input {
+    border-color: #f00;
+    color: #f00;
+  }
+
+  .auth__alert {
+    display: block;
+  }
+}

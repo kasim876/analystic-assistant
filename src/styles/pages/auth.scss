@@ -1,16 +1,16 @@
 @import "../mixins";
-@import "@shared/auth-logo/auth-logo";
-@import "@shared/auth-field/auth-field";
-@import "@shared/button/button";
-@import "@shared/radio/radio";
 
 .auth {
   flex-direction: column;
   align-items: center;
-  padding: rem(140px) 0;
+  padding-top: rem(140px);
+
+  &__logo {
+    margin-bottom: rem(40px);
+  }
 
   &__title {
-    margin-bottom: em(40px, 40px);
+    margin-bottom: rem(40px);
     font-size: rem(40px);
     line-height: 120%;
     color: var(--black);
@@ -22,6 +22,46 @@
     margin-bottom: rem(20px);
     width: 100%;
     max-width: rem(540px);
+
+    .auth__link {
+      margin-bottom: rem(12px);
+    }
+  }
+
+  &__field {
+    position: relative;
+    margin-bottom: rem(12px);
+    width: 100%;
+  }
+
+  &__icon {
+    position: absolute;
+    left: rem(20px);
+    top: rem(18px);
+    fill: var(--hit-gray);
+  }
+
+  &__input {
+    border: 1px solid var(--hit-gray);
+    border-radius: 4px;
+    padding-right: rem(20px);
+    padding-left: rem(60px);
+    width: 100%;
+    height: rem(60px);
+    color: var(--trout);
+
+    &::placeholder {
+      color: var(--hit-gray);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--trout);
+
+      &::placeholder {
+        font-size: 0;
+      }
+    }
   }
 
   &__link {
@@ -37,54 +77,30 @@
     }
   }
 
-  &__button {
-    margin-top: rem(20px);
+  &__btn {
+    border: 1px solid var(--red);
+    border-radius: rem(4px);
+    width: 100%;
+    height: rem(60px);
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--red);
+    transition: all 0.3s;
+
+    &:disabled {
+      border-color: var(--hit-gray);
+      background-color: var(--hit-gray);
+      pointer-events: none;
+    }
+
+    @include hover {
+      color: var(--red);
+      background-color: var(--white);
+    }
   }
 
   &__footer {
     grid-template-columns: repeat(2, auto);
     gap: rem(30px);
-  }
-
-  &__radios {
-    grid-template-columns: repeat(2, 1fr);
-    margin-bottom: rem(20px);
-  }
-
-  &__subtitle {
-    font-weight: 700;
-    font-size: rem(28px);
-    line-height: 120%;
-    color: var(--black);
-  }
-
-  &__note {
-    margin-bottom: em(20px, 16px);
-  }
-
-  &__button-link {
-    padding: rem(18px) 0;
-    text-align: center;
-  }
-
-  &__alert {
-    display: none;
-    margin: em(8px, 12.8px) 0;
-    color: #f00;
-  }
-}
-
-.wrong {
-  .auth-field__icon {
-    fill: #f00;
-  }
-
-  .input {
-    border-color: #f00;
-    color: #f00;
-  }
-
-  .auth__alert {
-    display: block;
   }
 }

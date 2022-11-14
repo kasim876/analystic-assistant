@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/auth.css">
+  <link rel="preload" href="resources/fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="resources/fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+  <div class="auth flex">
+    <img src="images/logo-hor.png" class="auth__logo">
+    <h1 class="auth__title">Войти</h1>
+    <form action="#" class="auth__form flex" method="post">
+      <div class="auth__field">
+        <svg class="auth__icon" width="24" height="24">
+          <use xlink:href="images/sprite.svg#mail">
+        </svg>
+        <input type="email" class="auth__input input-reset text-md" name="email" placeholder="E-mail">
+      </div>
+      <div class="auth__field">
+        <svg class="auth__icon" width="24" height="24">
+          <use xlink:href="images/sprite.svg#lock">
+        </svg>
+        <input type="password" class="auth__input input-reset text-md" name="pass" placeholder="Пароль">
+      </div>
+      <a href="#" class="auth__link text-md">Забыли пароль?</a>
+      <button class="btn-reset auth__btn text-md" type="submit" disabled>Войти</button>
+      
+    </form>
+    <div class="auth__footer grid">
+      <span class="text-md">Вы не зарегестрированы?</span>
+      <a href="registration.html" class="auth__link auth__link_decoration text-md">Регистрация</a>
+    </div>
+  </div>
+</body>
+</html>
