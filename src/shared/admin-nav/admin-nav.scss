@@ -3,10 +3,12 @@
 .admin-nav {
   position: sticky;
   top: rem(40px);
+  display: flex;
+  flex-direction: column;
   margin-right: rem(30px);
   border-radius: 4px;
   padding: rem(40px) rem(25px);
-  height: 100%;
+  height: calc(100vh - 80px);
   max-width: rem(255px);
   background-color: var(--primary);
 
@@ -20,7 +22,7 @@
   }
 
   &__list {
-    margin-bottom: rem(170px);
+    margin-bottom: auto;
   }
 
   &__item:not(:last-child) {

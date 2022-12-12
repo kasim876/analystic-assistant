@@ -1,0 +1,55 @@
+@import "../mixins";
+@import "@shared/admin-nav/admin-nav";
+@import "@shared/admin-header/admin-header";
+
+.company-report {
+  width: 100%;
+
+  &__container {
+    padding: var(--container-offset-v) var(--container-offset-h);
+  }
+
+  &__title {
+    margin-bottom: em(50px, 20px);
+    font-size: rem(20px);
+    line-height: 120%;
+    color: var(--primary);
+  }
+
+  &__section {
+    margin-bottom: rem(30px);
+  }
+
+  &__subtitle {
+    margin-bottom: em(30px, 20px);
+    font-size: rem(20px);
+    line-height: 150%;
+    color: #414347;
+  }
+
+  &__row {
+    display: flex;
+    gap: rem(70px);
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20px);
+  }
+
+  &__select {
+    display: block;
+    border-color: #dadbe2;
+    border-radius: rem(4px);
+    padding-left: rem(12px);
+    width: rem(260px);
+    height: rem(35px);
+    color: #414347;
+  }
+
+  &__btn {
+    width: rem(160px);
+    height: rem(30px);
+  }
+}

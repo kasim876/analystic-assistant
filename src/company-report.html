@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('shared/head/head.html', {
+  "title": "Пользователь",
+  "stylePath": "styles/company-report.css",
+})
+<body>
+  <div class="company-report__container flex">
+    @@include('shared/admin-nav/admin-nav.html')
+    <div class="company-report">
+      @@include('shared/admin-header/admin-header.html', { "name": "Диляра Сакатаева", "role": "admin" })
+        <h1 class="company-report__title">Загрузить отчёт для компании</h1>
+        <form class="company-report__content">
+          <div class="company-report__section">
+            <h2 class="company-report__subtitle">Выберите тип отчета</h2>
+            <div class="company-report__row">
+              <label class="radio">
+                <input type="radio" name="type" class="radio__input">
+                <span class="text-md radio__caption">Индивидуальный отчет</span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="type" class="radio__input">
+                <span class="text-md radio__caption">Общедоступный отчет</span> 
+              </label>
+            </div>
+          </div>
+          <div class="company-report__section">
+            <h2 class="company-report__subtitle">Выберите компанию</h2>
+            <div class="company-report__col">
+              <label class="radio">
+                <input type="radio" name="is-company" class="radio__input">
+                <span class="text-md radio__caption">Юридическое лицо</span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="is-company" class="radio__input">
+                <span class="text-md radio__caption">Физическое лицо</span> 
+              </label>
+            </div>
+          </div>
+          <div class="company-report__section">
+            <select class="company-report__select text-xs" name="company">
+              <option>Выберите компанию</option>
+              <option value="1">Компания 1</option>
+              <option value="2">Компания 2</option>
+              <option value="3">Компания 3</option>
+            </select>
+          </div>
+          <button class="btn btn-reset company-report__btn text-md">Загрузить отчет</button>
+        </form>
+    </div>
+  </div>
+</body>
+</html>
